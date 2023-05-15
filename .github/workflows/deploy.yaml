@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Example CD Django to DigitalOcean
+name: Example CD Django to Crane_Cloud
 
 # Controls when the workflow will run
 on:
@@ -24,7 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: Install doctl
-        uses: digitalocean/action-doctl@v2
+        uses: cranecloud/action-doctl@v2
         with:
           token: ${{ secrets.DO_ACCESS_TOKEN }}
       - name: Run a DOCTL Command
